@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/png" href="imagenes/Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts.js"></script>
+    <title>🐇🔪 Killer Bunny 🐇🔪</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ 
+</head>
+<body onload="addElement()">
+  
+<!--NavBar-->
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html"><span style="color: black;" class="font">Killer </span><span class="font" style="color: white;">Bunny</span></a>
+  <a href="index.html" class="active">Inicio</a>
+  <a href="camisas.html">Camisas</a>
+  <a href="sueteres.html">Sueteres</a>
+  <a href="accesorios.html">Accesorios</a>
+  <a href="register.html">Personalizadas</a>
+  <a href="todo.html">Todo</a>
+  <a href="login.html"><img src="https://img.icons8.com/material-outlined/24/000000/name.png"/>Login</a>
+  <a href=""><img class="car" src="https://img.icons8.com/material-outlined/24/000000/shopping-cart.png"/></a>
+
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+      
+
+
+
+
+<script>
+
+var ciudades = [
+            {
+                nombre:'Paris',
+                poblacion:'2,244 millones',
+                imagen:'http://tremendouswallpapers.com/wp-content/uploads/2014/12/amazing_eiffel_tower_paris_hd_travel_photos_and_wallpapers.jpg',
+                info:'https://sobreparis.com/informacion-de-paris/',
+                leer:'Leer mas'
+            },
+            {
+                nombre:'Budapest',
+                poblacion:'1,759 millones',
+                imagen:'https://i.ytimg.com/vi/8tZPo3eIOJQ/maxresdefault.jpg',
+                info:'https://www.disfrutabudapest.com/informacion-general',
+                leer:'Leer mas'
+            },
+            {
+                nombre:'Monterrey',
+                poblacion:'1,136 millones ',
+                imagen:'https://info7rm.blob.core.windows.net.optimalcdn.com/images/2017/04/27/monterrey.jpg',
+                info:'http://www.mty.itesm.mx/dhcs/deptos/co/co95-832/proy_actuales/gastro_regia/gasr_info.htm',
+                leer:'Leer mas'
+            },
+            {
+                nombre:'Berlin',
+                poblacion:'3,47 millones',
+                imagen:'https://cdn.civitatis.com/alemania/berlin/berlin.jpg',
+                info:'https://www.ebooking.com/es/noticias/informacion-de-berlin',
+                leer:'Leer mas'
+            },
+            {
+                nombre:'Jerusalem',
+                poblacion:'857.752 mil',
+                imagen:'https://i.ytimg.com/vi/QgAR2zWFUQI/maxresdefault.jpg',
+                info:'https://www.ecured.cu/Jerusal%C3%A9n',
+                leer:'Leer mas'
+            },
+            {
+                nombre:'Barcelona',
+                poblacion:'1,609 millones',
+                imagen:'https://www.gratistodo.com/wp-content/uploads/2016/09/Ciudad-de-Barcelona.jpeg',
+                info:'https://www.conocerbarcelona.com/informacion-general',
+                leer:'Leer mas'
+            }
+        ]
+            
+
+
+        var producto = [
+          {
+            nombre:'',
+            precio: '',
+            imagen: '',
+            descripcion: '',
+
+          }
+        ]
+        var body = document.getElementsByTagName('body')[0]
+
+        for (var i = 0; i < ciudades.length; i++){
+
+            var ciudad = ciudades[i];
+            var section = document.createElement('section')
+            section.setAttribute('id', ciudad.nombre)
+            section.style = 'background-image: url(' + ciudad.imagen +')'
+
+            
+            
+            var titulo = document.createElement('h2')
+            titulo.innerHTML = ciudad.nombre
+
+            var parrafo = document.createElement('p')
+            parrafo.innerHTML = ciudad.poblacion
+
+            var boton = document.createElement('button')
+            
+            boton.innerHTML = ciudad.leer;
+
+            var a = document.createElement('a');
+            a.href = ciudad.info;
+
+            boton.setAttribute("id", "botonn")
+
+            body.appendChild(section)
+            section.appendChild(titulo)
+            section.appendChild(parrafo)
+            section.appendChild(a)
+            a.appendChild(boton)
+
+        };
+        document.getElementById("botonn").addEventListener("click", link);
+
+        function link() {
+        document.getElementsByName("ciudad.info");
+        }
+
+    </script>
+  
+
+
+
+
+      <div class="footer">
+        <ul class="social-network social-circle">
+          <li><a class="icoTwitter" href="https://twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="icoFacebook" href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="icoInstagram" href="https://www.instagram.com/kill.er.bunny/" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+          <br>
+          <li>Redes Sociales</li>
+        </ul>
+      </div>
+    </body>
+    
+    <!--Scripts-->
+    </body>
+    </html>
